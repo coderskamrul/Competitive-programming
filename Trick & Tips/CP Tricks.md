@@ -196,34 +196,7 @@ printf("\n");
   
   //.....This works with any kinds of container.....
   ```
-
   
-
-- Check even and odd
-
-```c++
-if (num & 1) cout << "it’s odd"; else cout << "it’s even";
-```
-
-- Using emplace_back instead of push_back returns the reference of objects
-
-- Multiply result with 2
-
-```c++
-result = result << 1; 
-```
-
-- Divide result by 2
-
-```c++
-result = result >> 1; 
-```
-
-- swap a and b
-
-```c++
-a ^= b; b ^= a; a ^= b;
-```
 
 - Use this uncommon builtin functions
 
