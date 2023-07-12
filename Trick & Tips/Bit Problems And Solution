@@ -1,0 +1,148 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int       ll;
+ 
+void solve(){
+	
+	//01 one unique number find from array using XOR if occurance exatly 2 times
+/*	int a[5] = {1,2,1,3,2},Xor = 0; // out 3
+	for(int i = 0; i < 5; i++) Xor ^= a[i];
+	cout << Xor << '\n';*/
+	
+/*	//02 find two unique number from array using XOR if occurance exatly 2 times
+	int b[8] = {1,2,1,3,2,4,4,9},Xor = 0; // out 3,9
+	for(int i = 0; i < 8; i++) Xor ^= b[i];
+	int pos = 0,tmp = Xor;
+	while((tmp & 1) == 0)pos++,tmp /= 2;
+	int mask = 1 << pos, u1 = 0,u2 = 0;
+	for(int i = 0; i < 8; i++){
+		if((b[i] & mask) > 0) u1 ^= b[i];
+		else u2 ^= b[i];
+	}
+	cout << u1 << " " << u2 << '\n';*/
+	
+	//03 finding all subset   
+/*	 char ch[1000];
+	 cin >> ch;
+	 int n = strlen(ch);
+	 for(int i = 0; i < (1 << n); i++){
+	 	int  j = 0, tmp = i;
+	 	while(tmp > 0){
+	 		int last_bit = tmp & 1;
+	 		if(last_bit) {cout << ch[j];}
+	 		j++;
+	 		tmp >>= 1;
+	 	}
+	 	cout << '\n';
+	 }*/
+	 
+	 //04 Get ith Bit	Ex: 10 -> 1010
+/*	 int n = 10, i;	cin >> i;
+	 if((n & ((1 << i))) > 0) cout << 1 << '\n'; 
+	 else cout << 0 << '\n';*/
+	 
+	//05 Set ith Bit
+/*	 int n = 5, i;	cin >> i;
+	 n = (n | ((1 << i)));
+	 cout << n << '\n';	*/
+	 	
+	
+	//06 Clear ith Bit
+/*	 int n = 13, i;	cin >> i;
+	 n = (n & ~(1 << i));
+	 cout << n << '\n';	*/
+	 
+	//07 Update ith Bit 0 or 1
+/*	//At fast need to call SetBit(n,i) function than its work
+	 int n = 11, val = 0, i;	cin >> i;
+	 n = n | ((val<<i));
+	 cout << n << '\n';	*/
+	 
+	//08 Clear ith number of Bit
+/*	  int n = 255, i;	cin >> i; //if i = 7 than last 7 bit will be 0
+	  n = (n & (-1 << i));
+	  cout << n << '\n';	*/
+	  
+	  
+	  // 09 Clear Bits In Range
+/*	  int n = 31, i = 1, j = 3; // output 17
+	  int a = (-1 << (j+1));
+	  int b = (1 << i) - 1;
+	  int mask = a|b;
+	  n = n & mask;
+	  cout << n << '\n';*/
+	  
+	  //10 Check 2 power base or not
+/*	  int n = 15;
+	  if((n & (n - 1)) == 0) cout << "Power" << '\n';
+	  else cout <<"Not power" << '\n';*/
+
+	//11 Set bit count
+/*	int n = 15;
+	int cnt = __builtin_popcount(n); //O(1)
+	cout << cnt << '\n';*/
+	
+	//12 convert Int to Binary
+/*	int n = 15, ans = 0, pos = 1;
+	while(n > 0){
+		int lastBit = n & 1;
+		ans += pos * lastBit;
+		pos *= 10;
+		n >>= 1;
+	}
+	cout << ans << '\n';*/
+	
+	//13 Swap without extra 
+/*	  int x = 2, y = 3;
+	  x = x^y;
+	  y = x^y;
+	  x = x^y;
+ 	 cout << x << " " << y << "\n";*/
+	
+	//14. Check Least Significant Bit (LSB)
+/*	int num = 16;
+    if(num & 1) printf("LSB of %d is set (1).", num);
+    else printf("LSB of %d is unset (0).", num);*/
+    
+    //15. Check MSB Bit
+/*   int num = 205, msb;
+    // Move first bit of 1 to highest order 
+    int bit = 8; //BITS sizeof(int) * 8
+    msb = 1 << (bit - 1);
+    if(num & msb) printf("MSB of %d is set (1).", num);
+    else printf("MSB of %d is unset (0).", num);*/
+    
+    //16. Convert Upper Case to lower Case letter
+/*    string s="KAMRUL";
+	for(ll i = 0; i < s.size() ; i++){
+		s[i] |= ' ';
+	}
+    cout << s << '\n'; */   
+    
+    //17. Convert lower Case to Upper Case letter
+/*    string s="kamrulhasan";
+	for(ll i = 0; i < s.size() ; i++){
+		s[i] &= '_';
+	}
+    cout << s << '\n';*/    
+    
+    //18. Convert Toggle Case lower, Upper Case letter
+/*    string s="KaMrUl";
+	for(ll i = 0; i < s.size() ; i++){
+		s[i] ^= ' ';
+	}
+    cout << s << '\n';*/
+    
+    
+	
+}
+int main()
+{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+  	int t = 1;	//cin >> t;
+  	while(t--){
+  		solve();
+  	}
+	return 0;
+}
